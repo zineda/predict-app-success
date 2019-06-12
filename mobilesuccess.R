@@ -19,7 +19,6 @@ data <- read.csv("AppleStore.csv",header = TRUE)head(data)
 str(data)
 dim(data)
 
-
 data <- data[,-c(1,3,5,11)] # remove x, track_name, currency, and version. 
 colnames(data) #looks cool now!
 
@@ -53,8 +52,6 @@ priceDistribution <- ggplot(aes(x = price), data = data)+
   scale_y_log10()+
   ggtitle('price')
 priceDistribution 
-
-
 
 # Plotting a bar graph for categories: Game category dominates!
 categoryCount <- ggplot(aes(x = prime_genre), data = data)+
